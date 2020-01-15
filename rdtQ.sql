@@ -37,7 +37,7 @@ begin
       @ChildID       udtDeviceID;
 
    ---------------------------------------------
-   -- Get distinct contexts for given HU items.
+   -- Get distinct contexts for given Box items.
    ---------------------------------------------
    declare cItem cursor local for
       select distinct WhLocation
