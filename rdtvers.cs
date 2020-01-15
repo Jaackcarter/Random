@@ -1,4 +1,4 @@
-public String Matryoshka(DataObject_BoxHeader ParentBox, String strWarehouseList = "", ADCULHub.ADCUL_WS_ConnectionDetails _ConnectionDetails = null)
+public String ListBoxItemWarehouses(DataObject_BoxHeader ParentBox, String strWarehouseList = "", ADCULHub.ADCUL_WS_ConnectionDetails _ConnectionDetails = null)
 {
    // This function returns a string list of warehouses for all items within a given Box.
    // This includes child Boxes down to max depth level.
@@ -24,7 +24,7 @@ public String Matryoshka(DataObject_BoxHeader ParentBox, String strWarehouseList
    // Recurse function for child Box.
    foreach (DataObject_BoxHeader ChildBox in BoxContent.ChildBoxList)
    {
-       strWarehouseList = Matryoshka(ChildBox, strWarehouseList);
+       strWarehouseList = ListBoxItemWarehouses(ChildBox, strWarehouseList);
    }
 
    return strWarehouseList;
